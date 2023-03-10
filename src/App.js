@@ -1,6 +1,7 @@
 import ExpenseItem from "./componets/ExpenseItem";
 
 function App() {
+ 
   const expense =[
     {
       id: 'e1',
@@ -22,7 +23,7 @@ function App() {
       amount:450,
       date: new Date(2021, 5,12),
     },
-     
+    
   ];
       return (
     <div className="App">
@@ -45,6 +46,9 @@ function App() {
     amount={expense[3].amount} 
     date={expense[3].date}>
     </ExpenseItem>
+
+   
+
     </div>
   );
 }
