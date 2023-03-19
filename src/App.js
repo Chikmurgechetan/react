@@ -1,16 +1,9 @@
-import React,{useState} from "react";
+ import React from "react";
 import Expenses from "./Components/Expenses/Expenses";
-
+ import NewExpense from "./Components/NewExpense/NewExpense";
 
 const App =() => {  
-
-  const deleteHandler = (amount) =>{
-    console.log(amount);
-    expense = data.filter((item)=>
-    item.amount !== amount);
-    setData(expense);
-    console.log(expense);
-  };
+  
 
   let expense =[
     {
@@ -35,11 +28,11 @@ const App =() => {
     },
     
   ];
-  const [data, setData] = useState(expense);
   return (
     <div>
-      <h2>lets get Started!</h2>
-     <Expenses items={data} deleteHandler={deleteHandler} />
+    <NewExpense/>
+
+     <Expenses items={expense} />
     </div>
   );
 }
